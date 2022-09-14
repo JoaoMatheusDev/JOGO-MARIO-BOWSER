@@ -1,0 +1,81 @@
+/* Limpando estilizações padroes*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    }
+
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background: #000 url('./ImagensCSS/Cenario.jpg') no-repeat;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased !important;
+   
+    }
+
+.game-board {
+    width: 100%;
+    height: 750px;
+    border: 1px solid rgb(88, 215, 250);
+    position: bottom ;
+    overflow: hidden;
+}
+
+.logo{
+    position: absolute;
+    text-align: center;
+    margin-left: 130px;
+    width: 500px;
+}
+
+.pipe {
+position: absolute;
+bottom: 0;
+width: 150px;
+animation: pipe-animation 4s infinite linear;
+}
+
+.mario {
+width: 180px;
+position: absolute;
+bottom: 0;
+
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+
+@keyframes pipe-animation {
+
+    from {
+        right: -150px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+        }
+    40% {
+        bottom: 250px;
+       }
+    50% {
+        bottom: 250px;
+    } 
+    60% {
+        bottom: 250px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
